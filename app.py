@@ -5,17 +5,21 @@ app = Flask(__name__)
 
 # Define a route (URL path) and its function
 @app.route('/')
-def hello_world():
+def home():
     return "Hello, Tony"
 
-@app.route('/')
-def hello_world():
+@app.route('/av')
+def avengers():
     return "Hello, Avengers"
 
 @app.route('/greet')
-def hello_world():
+def greet_world():
     return "Hello, World!!"
 
-# Run the app
+@app.route('/greet/india')
+def greet_india():
+    return "Hello, Indi!!"
+
+#run app
 if __name__ == "__main__":
     app.run(debug=True)
