@@ -8,6 +8,10 @@ app = Flask(__name__)
 def hello_world():
     return "Hello, Tony"
 
+@app.route('/')
+def hello_world():
+    return "Hello, Avengers"
+
 @app.route('/greet')
 def hello_world():
     return "Hello, World!!"
